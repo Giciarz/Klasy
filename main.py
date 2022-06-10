@@ -1,21 +1,10 @@
-from methods import set_calibration
-
+from methods import Machine
 
 def main():
-    pass
 
-
-
-
-
-
-
-
-
-
+    Machine.set_calibration(123, "chyba tak")
 
 
 
 if __name__ == "__main__":
     main()
-
