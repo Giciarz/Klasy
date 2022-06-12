@@ -1,3 +1,4 @@
+
 class Machine:
     def __init__(self, frequency, power, voltage, calibration, number_of_turns, type_of_power):
         self.frequency = frequency
@@ -9,17 +10,22 @@ class Machine:
 
     def __set_number_of_turns(self, number):
         self.__number_of_turns = int(number)
-        return number
 
     def __set_type_of_power(self, type_of):
-        self.__type_of_power = str(type_of)
-        return type_of
+        self.__type_of_power = type_of
 
-    def set_calibration(self, number, type_of):
+    def set_calibration(self):
         self.__calibration = True
-        self.__number_of_turns(number)
-        self.__type_of_power(type_of)
-        return number, type_of
+        return self.__number_of_turns, self.__type_of_power, self.__calibration
 
     def set_power(self, value):
-        self.set_power = int(value)
+        self.power = value
+
+    def set_voltage(self, volt):
+        self.voltage = volt
+
+    def get_power(self):
+        return self.power
+
+    def get_voltage(self):
+        return self.voltage
